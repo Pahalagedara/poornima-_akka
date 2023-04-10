@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        <script>
+            function hideEnvelope() {
+                document.getElementById('mainBG').hidden = true;
+                document.getElementById('loading').hidden = false;
+            }
+            function showEnvelope() {
+                document.getElementById('mainBG').hidden = false;
+                document.getElementById('loading').hidden = true;
+            }
+            window.onload=()=>{
+                console.log('sss');
+                hideEnvelope();
+            }
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="pyro" id="mainBG">
+            <div  class="video-container">
+                <video autoplay muted>
+                    <source src="./assets/World.War.Z.2013.720p.BluRay.x264.YIFY.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="before"></div>
+            <div class="after"></div>
+        </div>
+        <div class="loadin-container">
+            <img class="zoom-in-out-box loading-img" id="loading" onclick="showEnvelope()"  src="./assets/envelop.png"/>
+        </div>
+    </body>
+</html>
